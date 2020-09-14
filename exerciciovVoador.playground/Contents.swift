@@ -4,36 +4,40 @@ protocol Voador {
     func voar()
 }
 
-class Pato: Voador{
+class Pato: Voador {
     func voar() {
-        print("Estou voando como um pato!")
+        print("Estou voando como um pato")
     }
 }
-class Aviao: Voador{
+
+class Aviao: Voador {
     func voar() {
         print("Estou voando como um avião")
     }
-    
 }
-class SuperHomem: Voador{
+
+class SuperHomem: Voador {
     func voar() {
-        print("Estou voando como um campeão!")
+        print("Estou voando como um campeão")
     }
 }
-class TorreDeControle{
-    var voadores = [Voador]()
+class TorreDeControle {
+    private var arrayVoadores = [Voador]()
     
-     func voamTodos(){
-        for item in voadores{
-            item.voar()
+    public func voamTodos() {
+        for item in arrayVoadores {
+            print(item.voar())
         }
     }
-     func adionarVoador(umVoador: Voador){
-        voadores.append(umVoador)
+    public func adicionarVoador(umVoador: Voador) {
+        arrayVoadores.append(umVoador)
     }
 }
 
+let torreUm = TorreDeControle()
+torreUm.adicionarVoador(umVoador: Pato())
+torreUm.adicionarVoador(umVoador: Aviao())
+torreUm.adicionarVoador(umVoador: SuperHomem())
 
-TorreDeControle.adionarVoador(umVoador: )
-
+torreUm.voamTodos()
 
