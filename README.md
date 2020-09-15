@@ -2,7 +2,7 @@
 
 <h3><b>Aula 14/09/2020 - Exercício de protocolo em Swift</b></h3>
 
-Exercício 2:
+<b>Exercício 2:</b>
 
 Crie um protocolo chamado Voador.
 Unidade 01: POO + Swift Defina o método Voar nesse protocolo, com a seguinte assinatura:
